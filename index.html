@@ -16,7 +16,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '36686452237636131');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=36686452237636131&ev=PageView&noscript=1"
+/></noscript>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -260,7 +274,7 @@
 
     <div class="countdown-wrap">
       <span>Opening Telegram in</span>
-      <span class="countdown-num" id="cdNum">10</span>
+      <span class="countdown-num" id="cdNum">120</span>
       <span>sec</span>
     </div>
     <div class="countdown-bar-wrap">
@@ -313,7 +327,7 @@
 (function(){
   var CHANNEL_URL = "https://t.me/+4KHmL1R3n3UyMzQ1";
 
-  var TOTAL = 10;
+  var TOTAL = 120;
   var left  = TOTAL;
   var numEl = document.getElementById('cdNum');
   var barEl = document.getElementById('cdBar');
@@ -326,7 +340,6 @@
     barEl.style.width = ((left/TOTAL)*100)+'%';
 
     if(left <= 0){
-      // Direct redirect — no loading screen, no delay.
       window.location.href = CHANNEL_URL;
     } else {
       setTimeout(tick, 1000);
